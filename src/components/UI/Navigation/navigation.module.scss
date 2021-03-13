@@ -1,0 +1,47 @@
+@import "../../../shared/shared.module.scss";
+
+.Navigation {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+
+  ul {
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+
+    * {
+      padding: 1vh;
+      cursor: pointer;
+    }
+  }
+  a {
+    text-decoration: none;
+    font-family: $Font-Text;
+    color: transparentize($TextColor, 0.6);
+    transition: all linear 0.2s;
+
+    &:hover {
+      color: opacify($TextColor, 0.6);
+    }
+  }
+}
+
+@include respond(tab-portrait) {
+  .Navigation {
+    ul {
+      justify-content: flex-end;
+
+      * {
+        margin: 0 1rem;
+      }
+
+      a {
+        font-size: $Font-Size-Navigation;
+      }
+    }
+  }
+}

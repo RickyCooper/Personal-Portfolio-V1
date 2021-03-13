@@ -1,0 +1,68 @@
+@import "../../shared/shared.module.scss";
+
+.Standard {
+  a {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  svg {
+    transition: all linear 0.2s;
+    padding-top: 8px;
+    path,
+    rect {
+      fill: transparentize($TextColor, 0.6);
+    }
+
+    &:hover {
+      transform: translateY(-0.5vh);
+
+      path,
+      rect {
+        fill: $Secondary-IconColor;
+      }
+    }
+  }
+}
+
+.Github {
+  svg {
+    path,
+    rect {
+      stroke: transparentize($TextColor, 0.6);
+      fill: none;
+    }
+
+    &:hover {
+      transform: translateY(-0.5vh);
+      path,
+      rect {
+        stroke: $Secondary-IconColor;
+        fill: none;
+      }
+    }
+  }
+}
+
+.SizingFooter {
+  svg {
+    @include respond(phone) {
+      // 1 rem = 8px, 8/16 = 50%
+      height: 6vh;
+    }
+
+    @include respond(tab-portrait) {
+      // 1 rem = 8px, 8/16 = 50%
+      height: 3vh;
+    }
+
+    @include respond(tab-landscape) {
+      height: 3v;
+    }
+
+    @include respond(desktop) {
+      height: 3vh;
+    }
+  }
+}

@@ -1,0 +1,112 @@
+// Color Palette
+$BackgroundColor: #202833;
+$Secondary-BackgroundColor: #ececec;
+$TextColor: white;
+$Secondary-TextColor: #202833;
+$BorderColor: #ffd20a;
+$IconColor: #3d4f68;
+$Secondary-IconColor: #ffd20a;
+
+// Fonts
+$Font-Title: "Staatliches", cursive;
+$Font-Text: "Scada", sans-serif;
+
+$Font-Size-Title: 7rem;
+$Font-Size-Header: 2rem;
+$Font-Size-Subheader: 2rem;
+$Font-Size-Text: 0.8rem;
+$Font-Size-Navigation: 0.7rem;
+
+// Size Formatting
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media (max-width: 37.5em) {
+      // 600px
+      @content;
+    }
+  }
+  @if $breakpoint == tab-portrait {
+    // 900px
+    @media (min-width: 46.25em) {
+      @content;
+    }
+  }
+  @if $breakpoint == tab-landscape {
+    // 1200px
+    @media (min-width: 75em) {
+      @content;
+    }
+  }
+  @if $breakpoint == desktop {
+    // 1800px
+    @media (min-width: 112.5em) {
+      @content;
+    }
+  }
+  @if $breakpoint == lrg-desktop {
+    // 1800px
+    @media (min-width: 212.5em) {
+      @content;
+    }
+  }
+}
+
+// Sizing Overrides
+
+html {
+  font-size: 120%;
+
+  @include respond(phone) {
+    font-size: 100%;
+  }
+
+  @include respond(tab-portrait) {
+    font-size: 120%;
+  }
+
+  @include respond(tab-landscape) {
+    font-size: 140%;
+  }
+
+  @include respond(desktop) {
+    font-size: 140%;
+  }
+}
+
+// Animations
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 0%;
+    transform: translatex(-90px);
+  }
+  50% {
+    transform: translatex(10px);
+  }
+  100% {
+    opacity: 100%;
+    transform: translatex(0px);
+  }
+}
+
+@keyframes widthGrow {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes bobbingText {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(50px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}

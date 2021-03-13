@@ -1,0 +1,32 @@
+@import "../../../shared/shared.module.scss";
+
+.Logo {
+  width: 2rem;
+
+  path {
+    fill: transparentize($TextColor, 0.6);
+    transition: all linear 0.2s;
+  }
+  rect {
+    transition: all linear 0.2s;
+    stroke: transparentize($TextColor, 0.6);
+  }
+
+  &:hover {
+    rect {
+      stroke: opacify($TextColor, 0.6);
+    }
+    path {
+      fill: opacify($TextColor, 0.6);
+    }
+  }
+}
+
+.Active {
+  rect {
+    stroke: $TextColor;
+  }
+  path {
+    fill: $TextColor;
+  }
+}

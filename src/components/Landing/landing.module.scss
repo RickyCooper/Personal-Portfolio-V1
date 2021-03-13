@@ -1,0 +1,105 @@
+@import "../../shared/shared.module.scss";
+
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+header {
+  width: fit-content;
+  margin: 20px;
+  color: $TextColor;
+  font-family: $Font-Title;
+
+  h1 {
+    margin: 0;
+    opacity: 0;
+    animation: slideInLeft 2s ease-out forwards;
+    animation-delay: 1s;
+    letter-spacing: 3px;
+    font-weight: normal;
+    font-size: $Font-Size-Title;
+  }
+
+  h1:nth-child(1) {
+    position: relative;
+    top: 3vh;
+  }
+
+  h1:nth-child(2) {
+    text-shadow: -1px -1px 0 $TextColor, 1px -1px 0 $TextColor,
+      -1px 1px 0 $TextColor, 1px 1px 0 $TextColor;
+    color: $BackgroundColor;
+  }
+
+  .yellowUnderline {
+    border-top: 9px solid $BorderColor;
+    width: 0;
+    animation: widthGrow 1s ease-out forwards;
+  }
+
+  ul {
+    padding: 0;
+    margin: 10px 3px;
+    opacity: 0;
+    font-size: 2rem;
+    animation: slideInLeft 2s ease-out forwards;
+    animation-delay: 1s;
+
+    li {
+      text-decoration: none;
+      list-style-type: none;
+    }
+  }
+}
+
+.ViewMyWork {
+  position: absolute;
+  bottom: 7vh;
+  width: 100%;
+  left: 0;
+  animation: bobbingText 2s ease-out infinite;
+
+  a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+
+    //opacity: 0;
+    //animation: increaseOpacity 5s forwards;
+    //animation-delay: 1s;
+
+    .arrowDown {
+      display: block;
+      width: 30px;
+      height: 38px;
+    }
+    .arrowDown:after {
+      content: "";
+      display: block;
+      width: 12px;
+      height: 12px;
+      border-top: 3px solid #ffffff;
+      border-right: 3px solid #ffffff;
+      transform: rotate(135deg);
+    }
+
+    p {
+      color: $TextColor;
+      font-family: "Armata", sans-serif;
+      font-size: 0.8rem;
+      font-weight: thin;
+      letter-spacing: 10px;
+    }
+  }
+}
+
+@include respond(tab-portrait) {
+  header {
+    position: relative;
+    top: -5vh;
+    left: 5vh;
+  }
+}
