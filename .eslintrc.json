@@ -1,0 +1,56 @@
+{
+  "root": true,
+  "env": {
+      "browser": true,
+      "commonjs": true,
+      "es2021": true,
+      "node": true
+  },
+  "extends": [
+      "eslint:recommended",
+      "plugin:react/recommended"
+
+  ],
+  "parserOptions": {
+      "sourceType": "module",
+      "ecmaVersion": 12,
+      "ecmaFeatures": {
+          "jsx": true
+      }
+  }, "plugins" : [
+      "react"
+  ], 
+  "rules": {
+      "react/prop-types": 0,
+      "prefer-template": 2,
+      "no-duplicate-imports": 2,
+      "operator-linebreak": [
+          2,
+          "before",
+          {
+              "overrides": {
+                  "?": "after"
+              }
+          }
+      ],
+      "no-use-before-define": 0,
+      "comma-dangle": [
+          "error",
+          "always-multiline"
+      ],
+      "no-plusplus": 0,
+      "consistent-return": 0,
+      "no-console": 0,
+      "max-len": 2,
+      "indent": ["error", 4],
+      "semi": [1, "always"],
+      "no-extra-semi": "off",
+      "no-multiple-empty-lines": 1,
+      "quotes": [
+          1,
+          "backtick"
+      ],
+      "react-in-jsx-scope": 0
+      
+  }
+}

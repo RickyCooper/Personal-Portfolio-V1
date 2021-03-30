@@ -1,20 +1,22 @@
 @import "../../../shared/shared.module.scss";
 
 .Social {
-  margin: 10px;
+  margin: 0px;
   ul {
     padding: 0;
     display: flex;
     flex-direction: row;
     justify-content: center;
     * {
-      padding: 10px 10px;
+      padding: 10px 10px 0px 10px;
     }
   }
 }
 
 @include respond(tab-portrait) {
-  .Social {
+  .Vertical {
+    padding: 10px;
+    margin: 10px;
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -23,6 +25,10 @@
 
     ul {
       flex-direction: column;
+      * {
+        padding: 10px 10px;
+      }
+
     }
   }
 }

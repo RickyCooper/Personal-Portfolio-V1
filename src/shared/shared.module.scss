@@ -11,11 +11,13 @@ $Secondary-IconColor: #ffd20a;
 $Font-Title: "Staatliches", cursive;
 $Font-Text: "Scada", sans-serif;
 
-$Font-Size-Title: 7rem;
+$Font-Size-Title: 6rem;
+$Font-Size-Title-Large: 7rem;
 $Font-Size-Header: 2rem;
 $Font-Size-Subheader: 2rem;
 $Font-Size-Text: 0.8rem;
 $Font-Size-Navigation: 0.7rem;
+
 
 // Size Formatting
 
@@ -40,13 +42,13 @@ $Font-Size-Navigation: 0.7rem;
   }
   @if $breakpoint == desktop {
     // 1800px
-    @media (min-width: 112.5em) {
+    @media (min-width: 80em) {
       @content;
     }
   }
   @if $breakpoint == lrg-desktop {
     // 1800px
-    @media (min-width: 212.5em) {
+    @media (min-width: 112.5em) {
       @content;
     }
   }
@@ -104,7 +106,7 @@ html {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(50px);
+    transform: translateY(30px);
   }
   100% {
     transform: translateY(0px);

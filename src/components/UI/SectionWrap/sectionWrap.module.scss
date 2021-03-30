@@ -1,0 +1,15 @@
+@import '../../../shared/shared.module.scss';
+
+.SectionWrap {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: space-around;
+    background-color: $BackgroundColor;
+}
+
+.Secondary {
+    background-color: $Secondary-BackgroundColor;
+}

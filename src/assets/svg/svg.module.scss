@@ -1,6 +1,7 @@
 @import "../../shared/shared.module.scss";
 
 .Standard {
+
   a {
     margin: 0;
     padding: 0;
@@ -49,7 +50,7 @@
   svg {
     @include respond(phone) {
       // 1 rem = 8px, 8/16 = 50%
-      height: 6vh;
+      height: 4.5vh;
     }
 
     @include respond(tab-portrait) {
@@ -58,11 +59,23 @@
     }
 
     @include respond(tab-landscape) {
-      height: 3v;
+      height: 3vh;
     }
 
     @include respond(desktop) {
       height: 3vh;
     }
   }
+}
+
+
+.Close {
+position: absolute;
+right: 0px;
+margin: 20px;
+transition: all linear 0.2s;
+
+&:hover {
+  transform: scale(1.2);
+}
 }

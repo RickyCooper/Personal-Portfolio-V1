@@ -1,11 +1,11 @@
 @import "../../../shared/shared.module.scss";
 
 .Navigation {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   width: 100%;
-
+  z-index: 1;
   ul {
     padding: 0;
     display: flex;

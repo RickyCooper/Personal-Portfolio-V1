@@ -1,0 +1,74 @@
+@import "../../shared/shared.module.scss";
+
+.fixScroll {
+    @include respond(phone) {
+          overflow: hidden;
+    }
+}
+.Contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+        font-weight: normal;
+        font-family: $Font-Title;
+        letter-spacing: 2px;
+        font-size: $Font-Size-Subheader;
+        color: $TextColor;
+    }
+
+    button {
+        width: 300px;
+        letter-spacing: 2px;
+        padding: 10px 30px;
+        background-color: $BackgroundColor;
+        border: 3px solid $BorderColor;
+        color: $TextColor;
+        font-family: $Font-Title;
+        font-size: $Font-Size-Subheader;
+
+        &:focus {
+            outline:0;
+            border: 2px solid $BorderColor;
+        }
+        
+        &:hover {
+        background-color: $BorderColor;
+        color: $BackgroundColor;
+        }
+
+        @include respond(phone){
+            width: 250px;
+        }
+    }
+
+    .BtnClicked {
+        background-color: $BorderColor;
+        color: $BackgroundColor;
+    }
+}
+
+
+footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    margin: 5% 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    p {
+        letter-spacing:2px;
+        font-size: $Font-Size-Navigation;
+        margin: 0;
+        font-family: $Font-Text;
+
+        a {
+            color: $IconColor;
+            text-decoration: none;
+        }
+    }
+}
