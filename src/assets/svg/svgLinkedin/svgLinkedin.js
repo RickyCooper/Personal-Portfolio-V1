@@ -13,7 +13,6 @@ const svgLinkedin = () => {
             href="https://www.linkedin.com/in/ricky-cooper-712514b3/"
             target="_blank"
             rel="noopener noreferrer"
-            style={{ overflow: `hidden` }}
         >
             <svg
                 id="Bold"

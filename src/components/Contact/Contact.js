@@ -22,7 +22,7 @@ const Contact = () => {
             contactForm.classList.add(styles.HideForm);
             contactForm.classList.remove(styles.ShowForm);
             contactForm.addEventListener(`animationend`, (event) => {
-                if (event.animationName != `contact_slideOut__2g3E3`) {
+                if (!event.animationName.includes('slideOut')) {
                     return;
                 }
                 contactForm.style.display = `none`;
