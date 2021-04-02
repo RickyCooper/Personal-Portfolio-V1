@@ -1,4 +1,7 @@
-@import '../../../shared/shared.module.scss';
+@import "../../../shared/_breakpoints.module.scss";
+@import "../../../shared/_color.module.scss";
+@import "../../../shared/font.module.scss";
+
 
 .SectionWrap {
     position: relative;

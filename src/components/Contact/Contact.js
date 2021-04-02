@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import ContactForm from '../UI/ContactForm/ContactForm';
 import SectionWrap from '../UI/SectionWrap/SectionWrap';
@@ -8,49 +8,51 @@ import styles from './contact.module.scss';
 /* eslint-disable max-len */
 
 const Contact = () => {
-    const [hasClicked, setHasClicked] = useState(false);
+    const [hasClicked, setHasClicked] = useState();
 
-    const toggleForm = useCallback(() => {
-        
+    useEffect(() => {
+        const contactForm = document.getElementById(`contactForm`);
 
         if (hasClicked) {
+            contactForm.style.display = `flex`;
+            contactForm.classList.add(styles.ShowForm);
+            contactForm.classList.remove(styles.HideForm);
             document.body.classList.add(styles.fixScroll);
-            return <ContactForm clicked={setHasClicked} />;
-        } else {
-            document.body.classList.remove(styles.fixScroll)
-            return (
-                <div className={styles.Contact}>
-                    <h1>YOU MADE IT THIS FAR</h1>
-                    <button
-                        onClick={setHasClicked}
-                        className={hasClicked ? styles.BtnClicked : null}
-                    >
-                        GET IN TOUCH
-                    </button>
-                </div>
-            );
+        } else if (!hasClicked) {
+            contactForm.classList.add(styles.HideForm);
+            contactForm.classList.remove(styles.ShowForm);
+            contactForm.addEventListener(`animationend`, (event) => {
+                if (event.animationName != `contact_slideOut__2g3E3`) {
+                    return;
+                }
+                contactForm.style.display = `none`;
+            });
+            document.body.classList.remove(styles.fixScroll);
         }
     }, [setHasClicked, hasClicked]);
 
     return (
         <SectionWrap>
-            {toggleForm()}
+            <ContactForm clicked={setHasClicked} />
+            <div className={styles.Contact} id={`contactBtn`}>
+                <h1>YOU MADE IT THIS FAR</h1>
+                <button
+                    onClick={() => setHasClicked(true)}
+                    className={hasClicked ? styles.BtnClicked : null}
+                >
+                    GET IN TOUCH
+                </button>
+            </div>
             <footer>
                 <Social />
-                <p><a href="mailto:Contact@rickycooper.com">Contact@rickycooper.com</a></p>
+                <p>
+                    <a href="mailto:Contact@rickycooper.com">
+                        Contact@rickycooper.com
+                    </a>
+                </p>
             </footer>
         </SectionWrap>
     );
 };
 
 export default Contact;
-
-/* 
-
-    <div className={styles.Contact}> 
-        <h1>YOU MADE IT THIS FAR</h1>
-<button className={hasClicked ? styles.BtnClicked : null }>GET IN TOUCH</button>
- </div>
-
-
-*/

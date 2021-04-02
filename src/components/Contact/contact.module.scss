@@ -1,11 +1,15 @@
-@import "../../shared/shared.module.scss";
+@import "../../shared/_breakpoints.module.scss";
+@import "../../shared/_animation.module.scss";
+@import "../../shared/_color.module.scss";
+@import "../../shared/font.module.scss";
 
 .fixScroll {
     @include respond(phone) {
-          overflow: hidden;
+      overflow: hidden;
     }
 }
 .Contact {
+    z-index: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -51,24 +55,34 @@
 
 
 footer {
-    width: 100%;
-    position: absolute;
-    bottom: 0px;
-    margin: 5% 0px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    margin: 5% 0px;
 
     p {
         letter-spacing:2px;
-        font-size: $Font-Size-Navigation;
         margin: 0;
+        font-size: $Font-Size-Navigation;
         font-family: $Font-Text;
-
         a {
             color: $IconColor;
             text-decoration: none;
         }
     }
+}
+
+.ShowForm {
+    animation: slideIn 0.5s forwards;
+
+    @include respond(phone) {
+        animation: slowlyAppear 0.2s forwards;
+    }
+}
+
+.HideForm {
+    animation: slideOut 0.5s forwards;
 }

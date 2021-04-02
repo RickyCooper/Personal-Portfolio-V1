@@ -1,9 +1,11 @@
-@import "./shared/shared.module.scss";
+@import "./shared/_breakpoints.module.scss";
+@import "./shared/_color.module.scss";
+@import "./shared/font.module.scss";
 
 
-body, html {
+body,
+html {
   padding: 0;
   margin: 0;
   background-color: $BackgroundColor;
-
-  }
+}

@@ -1,7 +1,8 @@
-@import "../../shared/shared.module.scss";
+@import "../../shared/_breakpoints.module.scss";
+@import "../../shared/_color.module.scss";
 
-.Standard {
 
+.SocialSvgStyling {
   a {
     margin: 0;
     padding: 0;
@@ -9,8 +10,22 @@
   }
 
   svg {
+    
     transition: all linear 0.2s;
-    padding-top: 8px;
+
+    @include respond(phone) {
+      height: 4.5vh;
+    }
+    @include respond(tab-portrait) {
+      height: 3vh;
+    }
+    @include respond(tab-landscape) {
+      height: 3vh;
+    }
+    @include respond(desktop) {
+      height: 3vh;
+    }
+
     path,
     rect {
       fill: transparentize($TextColor, 0.6);
@@ -34,8 +49,9 @@
       stroke: transparentize($TextColor, 0.6);
       fill: none;
     }
-
-    &:hover {
+  }
+  &:hover {
+    svg {
       transform: translateY(-0.5vh);
       path,
       rect {
@@ -45,29 +61,6 @@
     }
   }
 }
-
-.SizingFooter {
-  svg {
-    @include respond(phone) {
-      // 1 rem = 8px, 8/16 = 50%
-      height: 4.5vh;
-    }
-
-    @include respond(tab-portrait) {
-      // 1 rem = 8px, 8/16 = 50%
-      height: 3vh;
-    }
-
-    @include respond(tab-landscape) {
-      height: 3vh;
-    }
-
-    @include respond(desktop) {
-      height: 3vh;
-    }
-  }
-}
-
 
 .Close {
 position: absolute;

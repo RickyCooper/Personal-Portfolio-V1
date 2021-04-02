@@ -1,4 +1,4 @@
-@import "../../../shared/shared.module.scss";
+@import "../../../shared/_color.module.scss";
 
 .Logo {
   width: 2rem;
@@ -22,11 +22,3 @@
   }
 }
 
-.Active {
-  rect {
-    stroke: $TextColor;
-  }
-  path {
-    fill: $TextColor;
-  }
-}

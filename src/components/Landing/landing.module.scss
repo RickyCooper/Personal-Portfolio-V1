@@ -1,4 +1,8 @@
-@import "../../shared/shared.module.scss";
+@import "../../shared/_breakpoints.module.scss";
+@import "../../shared/_color.module.scss";
+@import "../../shared/_font.module.scss";
+@import "../../shared/_animation.module.scss";
+
 
 .Landing {
   display: flex;
@@ -13,14 +17,16 @@ header {
   font-family: $Font-Title;
 
   h1 {
-    margin: 0;
     opacity: 0;
     animation: slideInLeft 2s ease-out forwards;
     animation-delay: 1s;
+
+    margin: 0;
     letter-spacing: 3px;
     font-weight: normal;
     font-size: $Font-Size-Title;
 
+    
     @include respond(desktop) {
         font-size: $Font-Size-Title-Large;
     }
@@ -60,9 +66,8 @@ header {
 
 .ViewMyWork {
   position: absolute;
-  bottom: 7vh;
+  bottom: 5vh;
   width: 100%;
-  left: 0;
   animation: bobbingText 2s ease-out infinite;
 
   a {
@@ -70,11 +75,7 @@ header {
     flex-direction: column;
     align-items: center;
     text-decoration: none;
-
-    //opacity: 0;
-    //animation: increaseOpacity 5s forwards;
-    //animation-delay: 1s;
-
+    
     .arrowDown {
       display: block;
       width: 30px;
@@ -93,7 +94,7 @@ header {
     p {
       color: $TextColor;
       font-family: "Armata", sans-serif;
-      font-size: 1rem;
+      font-size: $Font-Size-Text;
       font-weight: thin;
       letter-spacing: 5px;
     }
@@ -101,10 +102,6 @@ header {
     @include respond(phone){
         position: static;
           animation: none;
-
-        p {
-          font-size: 1.7rem;
-        }
     }
 }
 
@@ -113,5 +110,10 @@ header {
     position: relative;
     top: -5vh;
     left: 5vh;
+
+    h1 {
+    font-size: $Font-Size-Title-Large;
+    }
+
   }
 }

@@ -1,4 +1,8 @@
-@import "../../../shared/shared.module.scss";
+@import "../../../shared/_breakpoints.module.scss";
+@import "../../../shared/_color.module.scss";
+@import "../../../shared/font.module.scss";
+
+
 
 .Navigation {
   position: fixed;
@@ -6,6 +10,7 @@
   right: 0;
   width: 100%;
   z-index: 1;
+
   ul {
     padding: 0;
     display: flex;
@@ -18,6 +23,7 @@
       cursor: pointer;
     }
   }
+
   a {
     text-decoration: none;
     font-family: $Font-Text;
@@ -44,4 +50,4 @@
       }
     }
   }
-}
+};

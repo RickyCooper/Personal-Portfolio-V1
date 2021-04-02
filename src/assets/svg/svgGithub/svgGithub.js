@@ -3,14 +3,9 @@ import styles from '../svg.module.scss';
 
 /* eslint-disable max-len */
 
-const svgGithub = (props) => {
-    let styleArray = [styles.Standard, styles.Github];
+const svgGithub = () => {
 
-    if (props.header) {
-        styleArray.push(styles.SizingHeader);
-    } else {
-        styleArray.push(styles.SizingFooter);
-    }
+    let styleArray = [styles.SocialSvgStyling, styles.Github, styles.SizingFooter];
 
     return (
         <a
