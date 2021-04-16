@@ -21,6 +21,7 @@
       "react"
   ], 
   "rules": {
+      "no-unused-vars": 1,
       "react/prop-types": 0,
       "prefer-template": 2,
       "no-duplicate-imports": 2,
@@ -51,6 +52,5 @@
           "backtick"
       ],
       "react-in-jsx-scope": 0
-      
   }
 }

@@ -8,33 +8,13 @@ import styles from './contact.module.scss';
 /* eslint-disable max-len */
 
 const Contact = () => {
-    const [hasClicked, setHasClicked] = useState();
+    const [hasClicked, setHasClicked] = useState(false);
 
-    useEffect(() => {
-        const contactForm = document.getElementById(`contactForm`);
-
-        if (hasClicked) {
-            contactForm.style.display = `flex`;
-            contactForm.classList.add(styles.ShowForm);
-            contactForm.classList.remove(styles.HideForm);
-            document.body.classList.add(styles.fixScroll);
-        } else if (!hasClicked) {
-            contactForm.classList.add(styles.HideForm);
-            contactForm.classList.remove(styles.ShowForm);
-            contactForm.addEventListener(`animationend`, (event) => {
-                if (!event.animationName.includes('slideOut')) {
-                    return;
-                }
-                contactForm.style.display = `none`;
-            });
-            document.body.classList.remove(styles.fixScroll);
-        }
-    }, [setHasClicked, hasClicked]);
-
-    return (
-        <SectionWrap>
-            <ContactForm clicked={setHasClicked} />
-            <div className={styles.Contact} id={`contactBtn`}>
+    let showForm = hasClicked ? (
+        <ContactForm />
+    ) : (
+        <main id="contact-main">
+            <div className={styles.Contact_Prompt}>
                 <h1>YOU MADE IT THIS FAR</h1>
                 <button
                     onClick={() => setHasClicked(true)}
@@ -43,10 +23,16 @@ const Contact = () => {
                     GET IN TOUCH
                 </button>
             </div>
+        </main>
+    );
+
+    return (
+        <SectionWrap classStyle={styles} className="ContentWrap" id={`contact`}>
+            {showForm}
             <footer>
                 <Social />
                 <p>
-                    <a href="mailto:Contact@rickycooper.com">
+                    <a href="mailto:contact@rickycooper.com">
                         Contact@rickycooper.com
                     </a>
                 </p>

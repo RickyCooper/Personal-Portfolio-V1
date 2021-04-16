@@ -4,15 +4,11 @@
 
 
 .SectionWrap {
-    position: relative;
+    background-color: $BackgroundColor;
     height: 100vh;
+    width: 100vw;
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-content: space-around;
-    background-color: $BackgroundColor;
-}
-
-.Secondary {
-    background-color: $Secondary-BackgroundColor;
 }
