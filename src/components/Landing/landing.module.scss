@@ -3,14 +3,54 @@
 @import "../../shared/_font.module.scss";
 @import "../../shared/_animation.module.scss";
 
-
-.Landing {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.LandingWrap {
+    
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  position: absolute;
+  
+  @include respond(phone) {
+    background-image: url('../../assets/Img/Landing/landing-phone.png');
+    background-size: cover;
 }
 
+  @include respond(tab-portrait) {
+      background-image: url('../../assets/Img/Landing/landing-tablet.png');
+      background-size: cover;
+  }
+  @include respond(tab-landscape) {
+      background-image: url('../../assets/Img/Landing/landing-desktop.png');
+      background-size: auto;
+  }
+  @include respond(desktop) {
+      background-image: url('../../assets/Img/Landing/landing-desktop.png');
+      background-size: auto;
+
+  }
+  @include respond(lrg-desktop) {
+      background-image: url('../../assets/Img/Landing/landing-lrg-desktop.png');
+      background-size: auto;
+
+  }
+
+  transition-duration: 1000ms;
+  transition-timing-function: ease-out;
+
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+
 header {
+  align-self: flex-start;
   width: fit-content;
   margin: 20px;
   color: $TextColor;
@@ -38,9 +78,9 @@ header {
   }
 
   h1:nth-child(2) {
-    text-shadow: -1px -1px 0 $TextColor, 1px -1px 0 $TextColor,
-      -1px 1px 0 $TextColor, 1px 1px 0 $TextColor;
-    color: $BackgroundColor;
+    /* text-shadow: -1px -1px 0 $TextColor, 1px -1px 0 $TextColor,
+      -1px 1px 0 $TextColor, 1px 1px 0 $TextColor; */
+    color: none;
   }
 
   .yellowUnderline {
@@ -65,43 +105,49 @@ header {
 }
 
 .ViewMyWork {
-  position: absolute;
-  bottom: 5vh;
-  width: 100%;
+  margin: 0 auto;
   animation: bobbingText 2s ease-out infinite;
+  border: solid white 4px;
+  padding: 10px 25px;
 
   a {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     text-decoration: none;
     
     .arrowDown {
-      display: block;
+      display: flex;
+      align-items: center;
+      align-content: center;
+      justify-content: center;
+      position: relative;
+      top: -0.35vh;
+      padding: 10px;
       width: 30px;
       height: 38px;
     }
     .arrowDown:after {
       content: "";
       display: block;
-      width: 12px;
-      height: 12px;
+      width: 10px;
+      height: 10px;
       border-top: 3px solid #ffffff;
       border-right: 3px solid #ffffff;
       transform: rotate(135deg);
     }
 
     p {
+      margin: 0;
       color: $TextColor;
-      font-family: "Armata", sans-serif;
+      font-family: $Font-Text;
       font-size: $Font-Size-Text;
-      font-weight: thin;
-      letter-spacing: 5px;
+      font-weight: normal;
+      letter-spacing: 10px;
     }
   }
     @include respond(phone){
-        position: static;
-          animation: none;
+      display: none;
     }
 }
 
