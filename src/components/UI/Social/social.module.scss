@@ -5,6 +5,7 @@
 
 .Social {
 
+  z-index: 1;
   margin: 0;
 
   ul {
@@ -23,7 +24,7 @@
   
   .Vertical {
     padding: 10px;
-    margin: 10px;
+    margin: 10px 20px;
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -33,7 +34,7 @@
     ul {
       flex-direction: column;
       * {
-        padding: 10px 10px;
+        padding: 10px 20px 10px;
       }
     }
   }

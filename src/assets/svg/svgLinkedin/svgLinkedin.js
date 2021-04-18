@@ -4,7 +4,6 @@ import styles from '../svg.module.scss';
 /* eslint-disable max-len */
 
 const svgLinkedin = () => {
-
     let styleArray = [styles.SocialSvgStyling, styles.SizingFooter];
 
     return (

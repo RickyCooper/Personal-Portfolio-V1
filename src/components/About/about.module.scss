@@ -2,32 +2,3 @@
 @import "../../shared/_color.module.scss";
 @import "../../shared/font.module.scss";
 
-
-.AboutBgImg {
-    position: absolute;
-    bottom: 0px;
-    height: 100vh;
-    background-image: url('../../assets/Img/About/1237180612-huge.jpg');
-    background-repeat: no-repeat;
-    background-size: contain;
-    opacity: 0.3;
-}
-.AboutTxt {
-    width: 25%;
-    margin: 10px;
-
-    h1 {
-        color: $Secondary-TextColor;
-        font-size: $Font-Size-Header;
-        font-family: $Font-Title;
-        font-weight: none;
-        letter-spacing: 3px;
-    }
-    p {
-        font-family: $Font-Text;
-
-        span{
-           color: $Third-Color;
-        }
-    }
-}

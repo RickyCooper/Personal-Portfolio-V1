@@ -11,12 +11,14 @@
   
   @include respond(phone) {
     background-image: url('../../assets/Img/Landing/landing-phone.png');
-    background-size: cover;
+    background-size: auto;
+    background-position: 50% 50% !important;
+
 }
 
   @include respond(tab-portrait) {
       background-image: url('../../assets/Img/Landing/landing-tablet.png');
-      background-size: cover;
+      background-size: auto;
   }
   @include respond(tab-landscape) {
       background-image: url('../../assets/Img/Landing/landing-desktop.png');

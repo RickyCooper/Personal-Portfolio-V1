@@ -6,16 +6,8 @@ import styles from './about.module.scss';
 
 const About = () => {
     return (
-        <SectionWrap Secondary>
-            <div className={styles.AboutBgImg}></div>
-            <div className={styles.AboutTxt}>
-                <h1>About</h1>
-                <p>
-                    Hello, I’m <span>Ricky Cooper</span> a full stack developer
-                    and web designer. I build beauftiful UX focused web applcations that
-                    breakaway from the standerd boilerplate design.
-                </p>
-            </div>
+        <SectionWrap classStyle={styles} className="AboutWrap" id="about">
+            <main className={styles.About}></main>
         </SectionWrap>
     );
 };
