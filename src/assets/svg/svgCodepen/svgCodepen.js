@@ -4,7 +4,6 @@ import styles from '../svg.module.scss';
 /* eslint-disable max-len */
 
 const svgCodepen = () => {
-
     let styleArray = [styles.SocialSvgStyling, styles.SizingFooter];
 
     return (
@@ -18,6 +17,8 @@ const svgCodepen = () => {
                 enableBackground="new 0 0 24 24"
                 viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
+                alt="Codepen Logo"
+                aria-label="Codepen Logo"
             >
                 <path
                     d="m.455 16.512 10.969 7.314c.374.23.774.233 1.152

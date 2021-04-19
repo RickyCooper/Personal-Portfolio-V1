@@ -15,10 +15,21 @@ const Social = (props) => {
     return (
         <div className={[...styleArray].join(` `)}>
             <ul>
-                <SvgCodepen />
-                <SvgBehance />
-                <SvgGitHub />
-                <SvgLinkedin />
+                <li>
+                    <SvgCodepen />
+                </li>
+
+                <li>
+                    <SvgBehance />
+                </li>
+
+                <li>
+                    <SvgGitHub />
+                </li>
+
+                <li>
+                    <SvgLinkedin />
+                </li>
             </ul>
         </div>
     );

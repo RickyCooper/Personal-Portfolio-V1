@@ -1,5 +1,5 @@
 import React from 'react';
-import landingStyle from '../../Landing/landing.module.scss';
+import '../../Landing/landing.module.scss';
 import styles from './sectionWrap.module.scss';
 
 /* eslint-disable max-len */

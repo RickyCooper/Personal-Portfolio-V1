@@ -16,6 +16,8 @@ const svgLogo = (props) => {
             viewBox="0 0 49 47"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
+            alt="Ricky Cooper logo"
+            aria-label="Ricky Cooper logo"
         >
             <rect
                 x="1.5"

@@ -23,6 +23,10 @@ form {
         width: 50vw;
     }
 
+    @include respond(lrg-desktop) {
+        width: 30vw;
+    }
+
     h1 {
         font-family: $Font-Title;
         letter-spacing: 5px;

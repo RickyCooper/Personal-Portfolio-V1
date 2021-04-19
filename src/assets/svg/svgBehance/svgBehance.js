@@ -4,7 +4,6 @@ import styles from '../svg.module.scss';
 /* eslint-disable max-len */
 
 const svgBehance = () => {
-
     let styleArray = [styles.SocialSvgStyling, styles.SizingFooter];
 
     return (
@@ -20,6 +19,8 @@ const svgBehance = () => {
                 x="0px"
                 y="0px"
                 viewBox="0 0 511.958 511.958"
+                alt="Behance Logo"
+                aria-label="Behance Logo"
             >
                 <path
                     d="M210.624,240.619c10.624-5.344,18.656-11.296,24.16-17.728c9.792-11.584,14.624-26.944,14.624-45.984

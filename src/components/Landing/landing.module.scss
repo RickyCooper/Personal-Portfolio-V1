@@ -8,7 +8,7 @@
   background-repeat: no-repeat;
   background-position: 50% 50%;
   position: absolute;
-  
+
   @include respond(phone) {
     background-image: url('../../assets/Img/Landing/landing-phone.png');
     background-size: auto;

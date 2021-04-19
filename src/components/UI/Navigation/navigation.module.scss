@@ -18,7 +18,7 @@
     align-items: center;
     justify-content: space-around;
 
-    * {
+    li {
       padding: 1vh;
     }
   }
@@ -40,7 +40,7 @@
     ul {
       justify-content: flex-end;
 
-      * {
+      li {
         margin: 0 1rem;
       }
 

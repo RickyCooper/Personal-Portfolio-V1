@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
 import ContactForm from '../UI/ContactForm/ContactForm';
 import SectionWrap from '../UI/SectionWrap/SectionWrap';
@@ -9,6 +9,8 @@ import styles from './contact.module.scss';
 
 const Contact = () => {
     const [hasClicked, setHasClicked] = useState(false);
+
+    const currentYear = new Date().getFullYear();
 
     let showForm = hasClicked ? (
         <ContactForm />
@@ -31,11 +33,7 @@ const Contact = () => {
             {showForm}
             <footer>
                 <Social />
-                <p>
-                    <a href="mailto:contact@rickycooper.com">
-                        Contact@rickycooper.com
-                    </a>
-                </p>
+                <p>Copyright &copy;{` ${currentYear} Ricky Cooper`}</p>
             </footer>
         </SectionWrap>
     );

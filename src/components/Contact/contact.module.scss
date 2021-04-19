@@ -66,12 +66,9 @@ footer {
     p {
         letter-spacing:2px;
         margin: 0;
-        font-size: $Font-Size-Navigation;
+        font-size: 0.6rem;
         font-family: $Font-Text;
-        a {
-            color: $IconColor;
-            text-decoration: none;
-        }
+        color: #8292A9;
     }
 }
 

@@ -1,20 +1,21 @@
 import React, { useEffect } from 'react';
-
 import SectionWrap from '../UI/SectionWrap/SectionWrap';
 import Social from '../UI/Social/Social';
 import styles from './landing.module.scss';
 
 const Landing = () => {
     useEffect(() => {
-        const el = document.getElementById(`landing`);
-        el.addEventListener(`mousemove`, (e) => {
-            el.setAttribute(
-                `style`,
-                `background-position: ${(e.pageX * 100) / screen.availWidth}% ${
-                    (e.pageY * 100) / screen.availHeight
-                }%;`,
-            );
-        });
+        if (window.matchMedia(`(min-width: 80em)`).matches) {
+            const el = document.getElementById(`landing`);
+            el.addEventListener(`mousemove`, (e) => {
+                el.setAttribute(
+                    `style`,
+                    `background-position: ${
+                        (e.pageX * 100) / screen.availWidth
+                    }% ${(e.pageY * 100) / screen.availHeight}%;`,
+                );
+            });
+        }
     }, []);
 
     // [ INFO ] SectionWrap takes classStyle and className, what this does is...

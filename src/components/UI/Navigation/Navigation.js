@@ -6,10 +6,18 @@ const Navigation = () => {
     return (
         <div className={styles.Navigation}>
             <ul>
-                <SvgLogo active />
-                <a href="#work">WORK</a>
-                <a href="#about">ABOUT</a>
-                <a href="#contact">CONTACT</a>
+                <li>
+                    <SvgLogo active />{` `}
+                </li>
+                <li>
+                    <a href="#work">WORK</a>{` `}
+                </li>
+                <li>
+                    <a href="#about">ABOUT</a>{` `}
+                </li>
+                <li>
+                    <a href="#contact">CONTACT</a>{` `}
+                </li>
             </ul>
         </div>
     );
