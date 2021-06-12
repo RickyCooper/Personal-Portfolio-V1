@@ -5,10 +5,12 @@
 
 .SectionWrap {
     background-color: $BackgroundColor;
-    height: 100vh;
+    min-height: 100vh;
     width: 100vw;
     position: relative;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    align-content: center;
     justify-content: center;
 }

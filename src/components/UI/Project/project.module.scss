@@ -1,0 +1,72 @@
+@import "../../../shared/_breakpoints.module.scss";
+@import "../../../shared/_color.module.scss";
+@import "../../../shared/font.module.scss";
+
+
+.Project {
+    margin: 20px 0px 20px 0px;
+    display: flex;
+    flex-direction: column;
+
+    h2 {
+        color: white;
+        font-family: $Font-Title;
+        font-weight: normal;
+        margin: 0px 10px;
+        letter-spacing: 5px;
+    }
+
+    p {
+        text-align: justify;
+        letter-spacing: 1px;
+        font-size: $Font-Size-Text;
+        font-family: $Font-Text;
+        color: #9b9b9b;
+        line-height: 1.6;
+
+    }
+
+    .Paragraph {
+        width: 60%;
+        letter-spacing: 1%;
+
+        @include respond(phone) {
+            width: 100%;
+            line-height: 2em;
+            text-align: left !important;
+        }
+     }
+
+    div {
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        align-items: center;
+        align-content: center;
+    }
+
+    a {
+        margin: 0px 10px;
+        align-items: center;
+    }
+
+    span {
+        font-family: $Number-Text;
+        color: $Third-Color;
+        letter-spacing: 5px;
+
+    }
+
+    .Technologies {
+        p {
+            color: $Third-Color;
+            margin-right: 5%; 
+            opacity: 0.5;
+
+            @include respond(phone) {
+                margin-right: 10%; 
+            }
+        }
+    }
+
+}

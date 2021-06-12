@@ -1,4 +1,6 @@
 import React, { useEffect } from 'react';
+
+import CooperSvg from '../../assets/svg/svgCooper/svgCooper';
 import SectionWrap from '../UI/SectionWrap/SectionWrap';
 import Social from '../UI/Social/Social';
 import styles from './landing.module.scss';
@@ -26,7 +28,9 @@ const Landing = () => {
             <main id="wrapper">
                 <header>
                     <h1>RICKY</h1>
-                    <h1>COOPER</h1>
+                    <h1>
+                        <CooperSvg />
+                    </h1>
                     <div className={styles.yellowUnderline}></div>
                     <ul>
                         <li>WEB DEVELOPER</li>

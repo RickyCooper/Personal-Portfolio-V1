@@ -32,7 +32,6 @@
   @include respond(lrg-desktop) {
       background-image: url('../../assets/Img/Landing/landing-lrg-desktop.png');
       background-size: auto;
-
   }
 
   transition-duration: 1000ms;
@@ -55,7 +54,7 @@ header {
   align-self: flex-start;
   width: fit-content;
   margin: 20px;
-  color: $TextColor;
+  color: white;
   font-family: $Font-Title;
 
   h1 {
@@ -81,7 +80,7 @@ header {
 
   h1:nth-child(2) {
     /* text-shadow: -1px -1px 0 $TextColor, 1px -1px 0 $TextColor,
-      -1px 1px 0 $TextColor, 1px 1px 0 $TextColor; */
+      -1px 1px 0 $TextColor, 1px 1px 0 $TextColor; */ 
     color: none;
   }
 

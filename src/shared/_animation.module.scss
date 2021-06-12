@@ -38,14 +38,15 @@
 
 @keyframes slideInLeft {
     0% {
-      opacity: 0%;
+      opacity: 0;
       transform: translatex(-90px);
     }
     50% {
+      opacity: 0.5;
       transform: translatex(10px);
     }
     100% {
-      opacity: 100%;
+      opacity: 1;
       transform: translatex(0px);
     }
   }

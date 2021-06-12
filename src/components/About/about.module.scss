@@ -2,3 +2,68 @@
 @import "../../shared/_color.module.scss";
 @import "../../shared/font.module.scss";
 
+
+.About {
+
+    h1 {
+
+        margin: 0;
+        letter-spacing: 15px;
+        font-weight: normal;
+        font-size: $Font-Size-Title;
+        font-family: $Font-Title;
+        color: $Title-Color;
+
+        
+        @include respond(desktop) {
+            font-size: $Font-Size-Title-Large;
+        }
+
+        span {
+            text-shadow: -2px -2px 0  $Third-Color, 2px -2px 0 $Third-Color,
+            -2px 2px 0 $Third-Color, 2px 2px 0 $Third-Color; 
+
+            color: $BackgroundColor;
+
+            @include respond(phone) {
+                text-shadow: -1px -1px 0  $Third-Color, 1px -1px 0 $Third-Color,
+                -1px 1px 0 $Third-Color, 1px 1px 0 $Third-Color; 
+            }
+        }
+
+        @include respond(phone) {
+            letter-spacing: 10px;
+            font-size: 3em;
+            text-align: center;
+        }
+    }
+
+    p {
+        text-align: justify;
+        width: 60%;
+        letter-spacing: 1px;
+        font-size: $Font-Size-Text;
+        font-family: $Font-Text;
+        color: #bbbbbb;
+        line-height: 1.6;
+
+        @include respond(desktop){
+            width: 30%;
+        }
+
+    }
+
+    span {
+        color: $Third-Color;
+    }
+
+    button {
+        background: transparent;  
+        color: white;
+        padding: 15px 20px;
+        letter-spacing: 2px;
+        margin: 20px;
+        border: 2px solid $Third-Color;
+    }
+    
+}

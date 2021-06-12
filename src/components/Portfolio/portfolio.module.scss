@@ -1,0 +1,55 @@
+@import "../../shared/_breakpoints.module.scss";
+@import "../../shared/_color.module.scss";
+@import "../../shared/font.module.scss";
+
+
+.Portfolio {
+
+    width: 80%;
+
+    @include respond(desktop){
+        width: 50%;
+    }
+
+    h1 {
+
+        margin: 0;
+        font-weight: normal;
+        font-size: $Font-Size-Title;
+        font-family: $Font-Title;
+        color: $Title-Color;
+        letter-spacing: 15px;
+
+        @include respond(desktop) {
+            font-size: $Font-Size-Title-Large;
+        }
+        
+        @include respond(phone) {
+            letter-spacing: 10px;
+            font-size: 3em;
+            text-align: center;
+        }
+    }
+
+    p {
+
+        font-family:$Font-Text;
+        letter-spacing: 3px;
+
+        a {
+            color: white;
+
+            padding: 10px 20px;
+            border: 2px solid $Third-Color;
+            margin: 5px;
+            letter-spacing: 20%;
+            text-decoration: none;
+
+        }
+
+        @include respond(phone) {
+            line-height: 3em;
+            text-align: center;
+        }
+    }
+}

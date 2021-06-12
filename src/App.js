@@ -1,6 +1,7 @@
 import React, { Suspense, useEffect } from 'react';
+
+import About from './components/About/About';
 import { Route } from 'react-router';
-// import About from './components/About/About';
 import styles from './app.module.scss';
 
 function App() {
@@ -18,10 +19,14 @@ function App() {
     const Navigation = React.lazy(() =>
         import(`./components/UI/Navigation/Navigation`),
     );
+    const About = React.lazy(() => import(`./components/About/About`));
     const Contact = React.lazy(() => import(`./components/Contact/Contact`));
+    const Portfolio = React.lazy(() =>
+        import(`./components/Portfolio/Portfolio`),
+    );
 
     return (
-        <div className="App">
+        <div className={styles.App}>
             <div className={styles.cursor} id="cursor"></div>
             <Route
                 path="/"
@@ -29,6 +34,8 @@ function App() {
                     <Suspense fallback={<div>loading</div>}>
                         <Navigation />
                         <Landing />
+                        <Portfolio />
+                        <About />
                         <Contact />
                     </Suspense>
                 )}
