@@ -13,10 +13,10 @@ const Project = ({ num, title, github, website, desc, technologies }) => {
             <div>
                 <span>{num}</span>
                 <h2>{title}</h2>
-                <a href={github}>
+                <a href={github} rel="noopener noreferrer" target="_blank">
                     <SvgGithub2 />
                 </a>
-                <a href={website}>
+                <a href={website} rel="noopener noreferrer" target="_blank">
                     <SvgWebpage />
                 </a>
             </div>

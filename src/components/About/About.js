@@ -28,6 +28,7 @@ const About = () => {
                     React, managing my database with MongoDB and building
                     backend REST APIs with Node and Express.
                 </p>
+
                 <button>
                     VIEW MY <span>CV</span>
                 </button>

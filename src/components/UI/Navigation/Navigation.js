@@ -7,16 +7,22 @@ const Navigation = () => {
         <div className={styles.Navigation}>
             <ul>
                 <li>
-                    <SvgLogo active />{` `}
+                    <a href="#landing">
+                        <SvgLogo active />
+                    </a>
+                    {` `}
                 </li>
                 <li>
-                    <a href="#work">WORK</a>{` `}
+                    <a href="#portfolio">WORK</a>
+                    {` `}
                 </li>
                 <li>
-                    <a href="#about">ABOUT</a>{` `}
+                    <a href="#about">ABOUT</a>
+                    {` `}
                 </li>
                 <li>
-                    <a href="#contact">CONTACT</a>{` `}
+                    <a href="#contact">CONTACT</a>
+                    {` `}
                 </li>
             </ul>
         </div>

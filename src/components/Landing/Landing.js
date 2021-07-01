@@ -38,7 +38,7 @@ const Landing = () => {
                     </ul>
                 </header>
                 <div className={styles.ViewMyWork}>
-                    <a href="#work">
+                    <a href="#portfolio">
                         <p>VIEW MY WORK</p>
                         <span className={styles.arrowDown} />
                     </a>

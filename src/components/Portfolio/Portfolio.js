@@ -39,7 +39,14 @@ const Portfolio = () => {
                     technologies={[`MERN`]}
                 />
                 <p className={styles.More} style={{ color: `white` }}>
-                    GO TO MY <a href="https://github.com/RickyCooper">GITHUB</a>
+                    GO TO MY{` `}
+                    <a
+                        href="https://github.com/RickyCooper"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                    >
+                        GITHUB
+                    </a>
                     {` `}
                     TO SEE MY OTHER PROJECTS
                 </p>
