@@ -64,13 +64,13 @@ form {
     }
 
         textarea {
-            margin: 5% 0;
+            margin: 3% 0 5% 0;
             height: 5vh;
             background-color: transparent;
             width: 100%;
             border-style: none; 
             resize: none;
-            border: 1px solid #3D4F68;
+            border: 1.5px solid #3D4F68;
             transition: all 0.3s ease;
             outline: none;
             overflow: auto;
@@ -82,7 +82,7 @@ form {
             &:focus {
                 height: 15vh;
     
-                border: 1px solid #E34B9E;
+                border: 1px solid $Third-Color;
             }
             &:valid {
                 height: 15vh;
@@ -128,18 +128,18 @@ form {
             height: 100%;
             width: 100%;
             pointer-events: none;
-            border-bottom: 1px solid #3D4F68;
+            border-bottom: 1.5px solid #3D4F68;
         }
 
         label::after {
             content: "";
             position: absolute;
             left: 0;
-            bottom: -1px;
+            bottom: -2px;
             height: 100%;
             width: 100%;
-            border-bottom: 2px solid #E34B9E;
-            transform: translateX(-100%);
+            border-bottom: 2px solid $Third-Color;
+            transform: translateX(-110%);
             transition: all 0.3s ease;
         }
 
@@ -169,7 +169,7 @@ form {
         letter-spacing: 0.5vh;
         color: white;
         font-family: $Font-Title;
-        font-size: 0.8rem;
+        font-size: 1rem;
         border: 2px solid $BorderColor;
         transition: all 0.2s ease;
 
