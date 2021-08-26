@@ -14,30 +14,33 @@ const Portfolio = () => {
         >
             <main className={styles.Portfolio}>
                 <h1>WHAT I&apos;VE BUILT</h1>
-                <Project
-                    num="01."
-                    title="Openbox.io"
-                    github="https://github.com/RickyCooper/OpenBox.io"
-                    website="https://open-box.io"
-                    desc="An online game creator web app designed to enables users to develop, host and share their own party games with friends. features include a full fledged game building UI, community built games showcase."
-                    technologies={[`React`, `Node`, `Express`, `MongoDB`]}
-                />
-                <Project
-                    num="02."
-                    title="Class Climate"
-                    github="https://github.com/RickyCooper/OpenBox.io"
-                    website="https://open-box.io"
-                    desc="A classoom managment web application designed to make it easier for teachers to apply behavior policy without disrupting learning, features were developed with the input of real teachers."
-                    technologies={[`MERN`]}
-                />
-                <Project
-                    num="03."
-                    title="Recipe sharing WEBAPP"
-                    github="https://github.com/RickyCooper/OpenBox.io"
-                    website="https://open-box.io"
-                    desc="A classoom managment web application designed to make it easier for teachers to apply behavior policy without disrupting learning, features were developed with the input of real teachers."
-                    technologies={[`MERN`]}
-                />
+                <div className={styles.Projects}>
+                    <Project
+                        num="01."
+                        title="Openbox.io"
+                        github="https://github.com/RickyCooper/OpenBox.io"
+                        website="https://open-box.io"
+                        desc="An online game creator web app designed to enables users to develop, host and share their own party games with friends. features include a full fledged game building UI, community built games showcase."
+                        technologies={[`React`, `Node`, `Express`, `MongoDB`]}
+                    />
+                    <Project
+                        num="02."
+                        title="Class Climate"
+                        github="https://github.com/RickyCooper/OpenBox.io"
+                        website="https://open-box.io"
+                        desc="A classoom managment web application designed to make it easier for teachers to apply behavior policy without disrupting learning, features were developed with the input of real teachers."
+                        technologies={[`MERN`]}
+                    />
+                    <Project
+                        num="03."
+                        title="Recipe sharing WEBAPP"
+                        github="https://github.com/RickyCooper/OpenBox.io"
+                        website="https://open-box.io"
+                        desc="A classoom managment web application designed to make it easier for teachers to apply behavior policy without disrupting learning, features were developed with the input of real teachers."
+                        technologies={[`MERN`]}
+                    />
+                </div>
+
                 <p className={styles.More} style={{ color: `white` }}>
                     GO TO MY{` `}
                     <a

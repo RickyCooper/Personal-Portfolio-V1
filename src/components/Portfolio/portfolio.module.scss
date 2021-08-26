@@ -5,14 +5,9 @@
 
 .Portfolio {
 
-    width: 80%;
-
-    @include respond(desktop){
-        width: 50%;
-    }
+    width: 100%;
 
     h1 {
-
         margin: 0;
         font-weight: normal;
         font-size: $Font-Size-Title;
@@ -21,7 +16,7 @@
         letter-spacing: 15px;
 
         @include respond(desktop) {
-            font-size: $Font-Size-Title-Large;
+            font-size: $Font-Size-Title;
         }
         
         @include respond(phone) {
@@ -29,6 +24,18 @@
             font-size: 3em;
             text-align: center;
         }
+    }
+
+    .Projects {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        margin: 2% auto;
+
+        @include respond(phone) {
+            width: 100%;
+        }
+
     }
 
     p {
